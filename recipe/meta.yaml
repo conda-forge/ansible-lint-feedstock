@@ -1,5 +1,5 @@
 {% set name = "ansible-lint" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9430ea6e654ba4bf5b9c6921efc040f46cda9c4fd2896a99ff71d21037bcb123
+  sha256: eb925d8682d70563ccb80e2aca7b3edf84fb0b768cea3edc6846aac7abdc414a
 
 build:
   number: 0
@@ -21,14 +21,11 @@ requirements:
     - pip
     - setuptools_scm
     - setuptools_scm_git_archive
-    - ansible
-    - pyyaml
-    - six
+    - ansible >=2.8
     - ruamel.yaml
   run:
-    - python
-    - ansible
-    - pyyaml
+    - python >=3.6
+    - ansible >=2.8
     - six
     - ruamel.yaml
 
