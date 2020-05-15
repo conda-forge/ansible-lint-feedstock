@@ -21,14 +21,11 @@ requirements:
     - pip
     - setuptools_scm
     - setuptools_scm_git_archive
-    - ansible
-    - pyyaml
-    - six
+    - ansible >=2.8
     - ruamel.yaml
   run:
-    - python
-    - ansible
-    - pyyaml
+    - python >=3.6
+    - ansible >=2.8
     - six
     - ruamel.yaml
 
