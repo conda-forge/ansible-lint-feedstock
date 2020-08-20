@@ -5,7 +5,7 @@ Home: https://github.com/ansible/ansible-lint
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Checks playbooks for practices and behaviour that could potentially be improved
 
