@@ -1,5 +1,5 @@
 {% set name = "ansible-lint" %}
-{% set version = "4.2.0" %}
+{% set version = "4.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eb925d8682d70563ccb80e2aca7b3edf84fb0b768cea3edc6846aac7abdc414a
+  sha256: 093c37ca9a811f08eb14ef93fdf44af1fbb33cc9af7a37352ec491f4c598054a
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - ansible-lint = ansiblelint.__main__:main
 requirements:
@@ -38,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Checks playbooks for practices and behaviour that could potentially be improved'
+  summary: Checks playbooks for practices and behaviour that could potentially be improved
   description: |
     Ansible Lint is a commandline tool for linting playbooks. Use it to detect behaviors and practices that could potentially be improved.
     The tool is used by the Ansible Galaxy project to lint and calculate quality scores for content contributed to the Galaxy Hub.
