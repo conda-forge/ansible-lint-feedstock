@@ -1,5 +1,5 @@
 {% set name = "ansible-lint" %}
-{% set version = "4.2.0" %}
+{% set version = "5.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,27 +7,30 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eb925d8682d70563ccb80e2aca7b3edf84fb0b768cea3edc6846aac7abdc414a
+  sha256: 93b06db16750f662a0ef0914fc7182f6c70aa4161d5695f64b39a56eaf6229c9
 
 build:
   number: 0
-  noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - ansible-lint = ansiblelint.__main__:main
+  skip: True  # [win or py < 36]
 requirements:
   host:
     - python
     - pip
     - setuptools_scm
     - setuptools_scm_git_archive
-    - ansible >=2.8
-    - ruamel.yaml
   run:
-    - python >=3.6
-    - ansible >=2.8
-    - six
-    - ruamel.yaml
+    - python
+    - enrich >=1.2.6
+    - packaging
+    - pyyaml
+    - rich >=9.5.1
+    - ruamel.yaml >=0.15.37,<1
+    - typing-extensions  # [py < 38]
+    - wcmatch >=7.0
+    - yamllint >=1.25.0
 
 test:
   imports:
