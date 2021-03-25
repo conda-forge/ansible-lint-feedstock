@@ -10,7 +10,7 @@ source:
   sha256: e5104cb11c437aec7f51e05a07f8c68d7f9b7c4cc36afc52edd8b0f71d84d63a
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - ansible-lint = ansiblelint.__main__:main
