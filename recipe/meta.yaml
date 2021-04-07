@@ -28,6 +28,7 @@ requirements:
     - pyyaml
     - rich >=9.5.1
     - ruamel.yaml >=0.15.37,<1
+    - tenacity
     - typing-extensions  # [py < 38]
     - wcmatch >=7.0
     - yamllint >=1.25.0
