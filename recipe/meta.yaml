@@ -1,5 +1,5 @@
 {% set name = "ansible-lint" %}
-{% set version = "6.4.0" %}
+{% set version = "6.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c5a76306cae906a260cf7286ca87c4d03ba4492b2ed7bfea21ad11fdf3c7e8d1
+  sha256: 5efc0d8dc67501f4ac550f84a4eaca1b25c94732ec3f8c8e63971a256c961282
 
 build:
   number: 0
@@ -24,9 +24,11 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - python >=3.8
-    - ansible-compat >=2.0.2
+    - ansible-compat >=2.2.0
     - ansible-core >=2.12.0
     - enrich >=1.2.6
+    - filelock
+    - jsonschema >=4.9.0
     - packaging
     - pyyaml
     - pytest
