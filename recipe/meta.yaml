@@ -1,5 +1,5 @@
 {% set name = "ansible-lint" %}
-{% set version = "6.6.1" %}
+{% set version = "6.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b5b3eae0271fbb5799dd5f8a111aa69ccd97ff2cc45253bd4101bf31b8f6beb7
+  sha256: a111295152d2de812857cac6bb2c6b003315826d9cae1410a4f10e3eeb255b09
 
 build:
   number: 0
