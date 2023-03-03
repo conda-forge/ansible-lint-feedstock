@@ -1,11 +1,11 @@
-About ansible-lint
-==================
+About ansible-lint-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ansible-lint-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ansible/ansible-lint
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ansible-lint-feedstock/blob/main/LICENSE.txt)
 
 Summary: Checks playbooks for practices and behaviour that could potentially be improved
 
