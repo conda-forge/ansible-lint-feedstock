@@ -33,7 +33,7 @@ requirements:
     - rich >=12.0.0
     - ruamel.yaml >=0.17.21,<0.18
     - subprocess-tee >=0.4.1
-    - yamllint >= 1.30.0
+    - yamllint >=1.30.0
     - wcmatch >=8.1.2
 
 test:
