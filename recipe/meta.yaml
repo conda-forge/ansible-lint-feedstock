@@ -1,5 +1,5 @@
 {% set name = "ansible-lint" %}
-{% set version = "6.17.0" %}
+{% set version = "6.17.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c6da12e9eb6dd58223b0a48400aaa25e677af6cac3d9db41fb1b62006ddebb36
+  sha256: f34e333f3555c99ff34c778f61d470d1e3a1eb6dc76090d0dd7b95b2c94745c2
 
 build:
   number: 0
@@ -30,8 +30,9 @@ requirements:
     - filelock >=3.3.0
     - jsonschema >=4.10.0
     - packaging >=21.3
-    - pathspec >=0.9.0
+    - pathspec >=0.10.3
     - pyyaml >=5.4.1
+    - requests >=2.31.0
     - rich >=12.0.0
     - ruamel.yaml >=0.17.0,<0.18,!=0.17.29,!=0.17.30
     - subprocess-tee >=0.4.1
