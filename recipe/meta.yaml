@@ -30,8 +30,9 @@ requirements:
     - filelock >=3.3.0
     - jsonschema >=4.10.0
     - packaging >=21.3
-    - pathspec >=0.9.0
+    - pathspec >=0.10.3
     - pyyaml >=5.4.1
+    - requests >=2.31.0
     - rich >=12.0.0
     - ruamel.yaml >=0.17.0,<0.18,!=0.17.29,!=0.17.30
     - subprocess-tee >=0.4.1
