@@ -1,5 +1,5 @@
 {% set name = "ansible-lint" %}
-{% set version = "6.21.1" %}
+{% set version = "6.22.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 05ffc6dfc8f3cbbf56f7f9770b3436fc7909bad5c1d75470efa064531f02df6e
+  sha256: 0d17dd4a58c3c825b7729c1067f151787529a5b183713c9e4d13a62f9d1ad26a
 
 build:
   number: 0
@@ -34,7 +34,7 @@ requirements:
     - pyyaml >=5.4.1
     - requests >=2.31.0
     - rich >=12.0.0
-    - ruamel.yaml >=0.17.0,<0.18,!=0.17.29,!=0.17.30
+    - ruamel.yaml >=0.18.5
     - subprocess-tee >=0.4.1
     - yamllint >=1.30.0
     - wcmatch >=8.1.2
