@@ -38,6 +38,7 @@ requirements:
     - subprocess-tee >=0.4.1
     - yamllint >=1.30.0
     - wcmatch >=8.1.2
+    - importlib_resources
 
 test:
   imports:
