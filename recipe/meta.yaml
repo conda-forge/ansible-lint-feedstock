@@ -18,12 +18,13 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.10
     - pip
+    - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive
   run:
-    - python >=3.9
+    - python >=3.10
     - ansible-core >=2.12.0
     - ansible-compat >=4.0.5
     - black >=22.8.0
@@ -37,8 +38,8 @@ requirements:
     - ruamel.yaml >=0.18.5
     - subprocess-tee >=0.4.1
     - yamllint >=1.30.0
-    - wcmatch >=8.1.2
-    - importlib_metadata
+    - wcmatch >=8.5.0
+    - importlib-metadata
 
 test:
   imports:
