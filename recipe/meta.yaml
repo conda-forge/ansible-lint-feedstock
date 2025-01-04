@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "ansible-lint" %}
 {% set version = "24.12.2" %}
 
@@ -10,7 +11,7 @@ source:
   sha256: f636309c4e7f724fc1a544df529c4c2354f54cf35ede11d750366afb1158a464
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - ansible-lint = ansiblelint.__main__:main
@@ -18,13 +19,13 @@ build:
 
 requirements:
   host:
-    - python 3.10
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - ansible-core >=2.12.0
     - ansible-compat >=24.10.0
     - black >=22.8.0
@@ -48,6 +49,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ansible/ansible-lint
