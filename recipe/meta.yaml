@@ -41,6 +41,7 @@ requirements:
     - yamllint >=1.30.0
     - wcmatch >=8.5.0
     - importlib-metadata
+    - distro
 
 test:
   imports:
