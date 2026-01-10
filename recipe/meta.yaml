@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "ansible-lint" %}
-{% set version = "25.12.1" %}
+{% set version = "26.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b6e9abfb4b3223c8dd081fe3c986f123d83b07e7011d40a684972431efb4c7de
+  sha256: ca5c968d1bbcc0c9447ededd3a754ccc936df91b2647755ca92c44d2ba91b805
 
 build:
   number: 0
@@ -32,7 +32,7 @@ requirements:
     - filelock >=3.3.0
     - jsonschema >=4.10.0
     - packaging >=21.3
-    - pathspec >=0.10.3
+    - pathspec <1.0.0,>=0.10.3
     - pyyaml >=5.4.1
     - requests >=2.31.0
     - rich >=12.0.0
